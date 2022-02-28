@@ -1,0 +1,65 @@
+body {
+   margin: 0px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.split {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+
+.left {
+  left: 0;
+  background-color: #111;
+  background-image: url("https://d25tv1xepz39hi.cloudfront.net/2018-10-01/files/Pancake_small.gif");
+  background-repeat: no-repeat;
+ background-size: 80%;
+
+ background-position: 50% 50%;
+  width:30%;
+
+}
+
+.right {
+  right: 0;
+  background-color: white;
+  width:70%;
+    text-align: center;
+
+  /* color: black;
+  text-align: center;
+  padding-top: 15%; */
+
+}
+
+.loginsection{
+  color: black;
+  text-align: center;
+  padding-top: 15%;
+}
+
+
+.navbar{
+  padding: 0;
+  background-color: #261C2C;
+  color: white;
+}
+.nav-link{
+  font-size:1.2rem;
+  color: white;
+
+}
+.navbar-brand{
+  font-size:1.5rem;
+  font-weight: bold;
+  color: black;
+  padding-left: 7px;
+}

@@ -1,0 +1,17 @@
+﻿{% block page_content %}
+<div class="col-md-8 offset-md-2">
+	<h1>Recipe Detail</h1>
+	<hr>
+	<h2><a> {{recipe.title}} </a></h2>
+	<small>
+		{{recipe.created_on.date}} |&nbsp;
+		Ingredients:&nbsp;
+		{% for ingredient in recipe.ingredients.all %}
+		<a>
+			{{ingredient.name}}
+		</a>&nbsp;
+		{% endfor %}
+	</small>
+	<p> {{ recipe.instructions | slice:":400" }}...</p>
+</div>
+{% endblock %}

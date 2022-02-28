@@ -1,0 +1,24 @@
+{% block page_content %}
+	<div class="col-md-8 offset-md-2">
+		<h1>Recipe Index</h1>
+		<h3>Create a recipe:</h3>
+		<form method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				{{ form.title }}
+			</div>
+			<div class="form-group">
+				{{ form.instructions }}
+			</div>
+			<div class="form-group">
+				{{ form.ingredients }}
+			</div>
+			<button type="submit" class="btn btn-primary">Create</button>
+		</form>
+		<hr>
+		{% for recipe in recipes %}
+		<h2><a href="{% url 'recipe_detail' recipe.pk%}">{{ recipe.title }}</a></h2>
+		<p> {{ recipe.instructions | slice:":400" }}...</p>
+		{% endfor %}
+	</div>
+{% endblock %}
